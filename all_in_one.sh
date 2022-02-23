@@ -22,6 +22,14 @@
 #https://www.94ish.me/ 
 #https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master
 #
+#
+#MTProxy by ellermister
+#https://github.com/ellermister/mtproxy
+#
+#
+#warp by fscarmen
+#https://github.com/fscarmen/warp
+#
 #special thanks to all above
 #
 
@@ -31,9 +39,12 @@ v2ray_233='v2ray_233.sh'
 v2ray_hijk='v2ray_hijk.sh'
 xray_hijk='xray_hijk.sh'
 bbr='bbr.sh'
+mtproxy='mtproxy.sh'
+warp='warp.sh'
 
 #save path
 save_path='/root'
+mtproxy_path='/root/mtproxy'
 
 #URL
 url_shadowsocks='https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh'
@@ -41,6 +52,8 @@ url_v2ray_233='https://git.io/v2ray.sh'
 url_v2ray_hijk='https://s.hijk.art/v2ray.sh'
 url_xray_hijk='https://s.hijk.art/xray.sh'
 url_bbr='https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh'
+url_mtproxy='https://raw.githubusercontent.com/ellermister/mtproxy/master/mtproxy.sh'
+url_warp='https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh'
 
 #color
 RED="\033[31m"      # Error message
@@ -72,6 +85,12 @@ download(){
 	chmod +x ${1}
 }
 
+
+download_mtp(){
+	wget -O ${1} ${2}
+	chmod +x ${1}
+}
+
 checkFile(){
 	if [ -s ${1} ];then
 		colorEcho $GREEN "下载成功..."
@@ -85,6 +104,11 @@ checkFile(){
 	colorEcho $RED "下载失败... \n"
 	exit 1
 	fi
+}
+
+mtproxyDir(){
+	mkdir $mtproxy_path
+	cd $mtproxy_path
 }
 
 start(){
@@ -114,17 +138,27 @@ start(){
 	colorEcho $GREEN "#https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master"
 	colorEcho $PLAIN "#"
 	colorEcho $PLAIN "#"
+	colorEcho $GREEN "#MTProxy by @ellermister"
+	colorEcho $GREEN "#https://github.com/ellermister/mtproxy"
+	colorEcho $PLAIN "#"
+	colorEcho $PLAIN "#"
+	colorEcho $GREEN "#warp by @fscarmen"
+	colorEcho $GREEN "#https://github.com/fscarmen/warp"
+	colorEcho $PLAIN "#"
+	colorEcho $PLAIN "#"
 	colorEcho $RED   "#special thanks to all above"
 	colorEcho $PLAIN "###"
 	
 	colorEcho $YELLOW "请选择要下载的脚本... \n"
-	#select script in Shadowsocks V2ray_233 V2ray_hijk Xray_hijk BBR Exit
+	#select script in Shadowsocks V2ray_233 V2ray_hijk Xray_hijk BBR MTProxy Warp Exit
 	#do
 	colorEcho $GREEN "[1] Shadowsocks all in one By Teddysun"
 	colorEcho $GREEN "[2] V2ray_233 By 233Boy"
 	colorEcho $GREEN "[3] V2ray_hijk By 网络跳跃(hijk.art)"
 	colorEcho $GREEN "[4] Xray_hijk By 网络跳跃(hijk.art)"
 	colorEcho $GREEN "[5] BBR By 千影&cx9208"
+	colorEcho $GREEN "[6] MTProxy By ellermister"
+	colorEcho $GREEN "[7] Warp By fscarmen"
 	colorEcho $GREEN "[0] 退出 \n"
 	
 	read -p "请选择：" selection
@@ -148,6 +182,15 @@ start(){
 		5) colorEcho $BLUE "选择了BBR \n"
 		download $bbr $url_bbr
 		checkFile $bbr
+		;;
+		6) colorEcho $BLUE "选择了MTproxy \n"
+		mtproxyDir
+		download_mtp $mtproxy $url_mtproxy
+		checkFile $mtproxy
+		;;
+		7) colorEcho $BLUE "选择了Warp \n"
+		download $warp $url_warp
+		checkFile $warp
 		;;
 		0) colorEcho $BLUE "Bye.. \n"
 	esac
