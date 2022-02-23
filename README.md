@@ -1,9 +1,9 @@
 # all_in_one_script
 fq安装脚本集合  
 
-整合了目前流行的SS, V2ray, Xray, BBR安装脚本，以下为各脚本原始作者。  
+整合了目前流行的SS, V2ray, Xray, BBR, MTproxy, Warp 安装脚本，以下为各脚本原始作者。  
 
-A all in one script，a collection of popular scripts for SS, V2ray, Xray and BBR.  
+A all in one script，a collection of popular scripts for SS, V2ray, Xray,BBR, MTproxy, Warp.  
 
 shadowsocks by @teddysun  
 https://teddysun.com/486.html  
