@@ -18,6 +18,11 @@
 #https://v2raytech.com/xray-one-click-script/
 #
 #
+#xray by @Misaka
+#https://github.com/Misaka-blog
+#https://owo.misaka.rest
+#
+#
 #BBR by @千影,@cx9208
 #https://www.94ish.me/ 
 #https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master
@@ -50,7 +55,9 @@ mtproxy_path='/root/mtproxy'
 url_shadowsocks='https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh'
 url_v2ray_233='https://git.io/v2ray.sh'
 url_v2ray_hijk='https://s.hijk.art/v2ray.sh'
-url_xray_hijk='https://s.hijk.art/xray.sh'
+#url_xray_hijk='https://s.hijk.art/xray.sh'
+#url_xray_hijk='https://cdn.jsdelivr.net/gh/Misaka-blog/Xray-script@master/xray.sh'
+url_xray_hijk='https://raw.githubusercontent.com/blog-misaka/xray-script/main/xray.sh'
 url_bbr='https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh'
 url_mtproxy='https://raw.githubusercontent.com/ellermister/mtproxy/master/mtproxy.sh'
 url_warp='https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh'
@@ -128,9 +135,12 @@ start(){
 	colorEcho $GREEN "#https://v2raytech.com/v2ray-all-in-one-script-vless-tcp-xtls-support/"
 	colorEcho $PLAIN "#"
 	colorEcho $PLAIN "#"
-	colorEcho $GREEN "#xray by @hijk"
-	colorEcho $GREEN "#https://hijk.art"
-	colorEcho $GREEN "#https://v2raytech.com/xray-one-click-script/"
+	#colorEcho $GREEN "#xray by @hijk"
+	#colorEcho $GREEN "#https://hijk.art"
+	#colorEcho $GREEN "#https://v2raytech.com/xray-one-click-script/"
+	colorEcho $GREEN "#xray by @Misaka"
+	colorEcho $GREEN "#https://github.com/Misaka-blog"
+	colorEcho $GREEN "#https://owo.misaka.rest"
 	colorEcho $PLAIN "#"
 	colorEcho $PLAIN "#"
 	colorEcho $GREEN "#BBR by @千影,@cx9208"
