@@ -46,6 +46,7 @@ xray_hijk='xray_hijk.sh'
 bbr='bbr.sh'
 mtproxy='mtproxy.sh'
 warp='warp.sh'
+all_in_one='all_in_one.sh'
 
 #save path
 save_path='/root'
@@ -61,6 +62,8 @@ url_xray_hijk='https://raw.githubusercontent.com/Misaka-blog/xray-script/main/xr
 url_bbr='https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh'
 url_mtproxy='https://raw.githubusercontent.com/ellermister/mtproxy/master/mtproxy.sh'
 url_warp='https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh'
+url_all_in_one='https://raw.githubusercontent.com/kokeiisama/all_in_one_script/main/all_in_one.sh'
+
 
 #color
 RED="\033[31m"      # Error message
@@ -169,6 +172,7 @@ start(){
 	colorEcho $GREEN "[5] BBR By 千影&cx9208"
 	colorEcho $GREEN "[6] MTProxy By ellermister"
 	colorEcho $GREEN "[7] Warp By fscarmen"
+	colorEcho $GREEN "[9] Update"
 	colorEcho $GREEN "[0] 退出 \n"
 	
 	read -p "请选择：" selection
@@ -201,6 +205,10 @@ start(){
 		7) colorEcho $BLUE "选择了Warp \n"
 		download $warp $url_warp
 		checkFile $warp
+		;;
+		9) colorEcho $BLUE "选择了Warp \n"
+		download $all_in_one $url_all_in_one
+		checkFile $all_in_one
 		;;
 		0) colorEcho $BLUE "Bye.. \n"
 	esac
