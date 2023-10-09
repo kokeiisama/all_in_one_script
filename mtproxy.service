@@ -9,7 +9,7 @@ User=root
 #CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 #AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/root/mtproxy/mtproxy.sh start
+ExecStart=/root/mtproxy/mtproto-proxy -u nobody -p 8888 -H 22443 -S d61244d3f8e533fb831ee25be6babb0b --aes-pwd /root/mtproxy/proxy-secret /root/mtproxy/proxy-multi.conf -M 1 -P d61244d3f8e533fb831ee25be6babb0b --domain azure.microsoft.com
 Restart=on-failure
 RestartPreventExitStatus=23
 
