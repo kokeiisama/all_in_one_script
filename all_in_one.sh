@@ -34,6 +34,7 @@
 #
 #warp by fscarmen
 #https://github.com/fscarmen/warp
+#https://gitlab.com/fscarmen/warp
 #
 #special thanks to all above
 #
@@ -61,7 +62,7 @@ url_v2ray_hijk='https://s.hijk.art/v2ray.sh'
 url_xray_hijk='https://raw.githubusercontent.com/Misaka-blog/xray-script/main/xray.sh'
 url_bbr='https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh'
 url_mtproxy='https://raw.githubusercontent.com/ellermister/mtproxy/master/mtproxy.sh'
-url_warp='https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh'
+url_warp='https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh'
 url_all_in_one='https://raw.githubusercontent.com/kokeiisama/all_in_one_script/main/all_in_one.sh'
 
 
