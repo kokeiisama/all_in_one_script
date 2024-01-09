@@ -23,9 +23,13 @@
 #https://owo.misaka.rest
 #
 #
-#BBR by @千影,@cx9208
+#old BBR by @千影,@cx9208
 #https://www.94ish.me/ 
 #https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master
+#
+#
+#new BBR by @jinwyp
+#https://github.com/jinwyp/one_click_script
 #
 #
 #MTProxy by ellermister
@@ -44,7 +48,9 @@ shadowsocks='shadowsocks_all.sh'
 v2ray_233='v2ray_233.sh'
 v2ray_hijk='v2ray_hijk.sh'
 xray_hijk='xray_hijk.sh'
-bbr='bbr.sh'
+old_bbr='bbr_old.sh'
+new_bbr='bbr_new.sh'
+
 mtproxy='mtproxy.sh'
 warp='warp.sh'
 all_in_one='all_in_one.sh'
@@ -60,7 +66,8 @@ url_v2ray_hijk='https://s.hijk.art/v2ray.sh'
 #url_xray_hijk='https://s.hijk.art/xray.sh'
 #url_xray_hijk='https://cdn.jsdelivr.net/gh/Misaka-blog/Xray-script@master/xray.sh'
 url_xray_hijk='https://raw.githubusercontent.com/Misaka-blog/xray-script/main/xray.sh'
-url_bbr='https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh'
+url_bbr_old='https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh'
+url_bbr_new='https://raw.githubusercontent.com/jinwyp/one_click_script/master/install_kernel.sh'
 url_mtproxy='https://raw.githubusercontent.com/ellermister/mtproxy/master/mtproxy.sh'
 url_warp='https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh'
 url_all_in_one='https://raw.githubusercontent.com/kokeiisama/all_in_one_script/main/all_in_one.sh'
@@ -147,9 +154,11 @@ start(){
 	colorEcho $GREEN "#https://owo.misaka.rest"
 	colorEcho $PLAIN "#"
 	colorEcho $PLAIN "#"
-	colorEcho $GREEN "#BBR by @千影,@cx9208"
-	colorEcho $GREEN "#https://www.94ish.me/" 
-	colorEcho $GREEN "#https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master"
+	#colorEcho $GREEN "#BBR by @千影,@cx9208"
+	#colorEcho $GREEN "#https://www.94ish.me/" 
+	#colorEcho $GREEN "#https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master"
+	colorEcho $GREEN "#new BBR by @jinwyp"
+	colorEcho $GREEN "#https://github.com/jinwyp/one_click_script"
 	colorEcho $PLAIN "#"
 	colorEcho $PLAIN "#"
 	colorEcho $GREEN "#MTProxy by @ellermister"
@@ -170,7 +179,8 @@ start(){
 	colorEcho $GREEN "[2] V2ray_233 By 233Boy"
 	colorEcho $GREEN "[3] V2ray_hijk By 网络跳跃(hijk.art)"
 	colorEcho $GREEN "[4] Xray_hijk By 网络跳跃(hijk.art)"
-	colorEcho $GREEN "[5] BBR By 千影&cx9208"
+	colorEcho $RED "[50] BBR By 千影&cx9208" $RED "NOT RECOMMENDED"
+	colorEcho $GREEN "[5] new BBR by @jinwyp"
 	colorEcho $GREEN "[6] MTProxy By ellermister"
 	colorEcho $GREEN "[7] Warp By fscarmen"
 	colorEcho $GREEN "[9] Update"
@@ -194,9 +204,13 @@ start(){
 		download $xray_hijk $url_xray_hijk
 		checkFile $xray_hijk
 		;;
-		5) colorEcho $BLUE "选择了BBR \n"
-		download $bbr $url_bbr
-		checkFile $bbr
+		50) colorEcho $BLUE "选择了BBR_OLD \n"
+		download $bbr_old $url_bbr_old
+		checkFile $bbr_old
+		;;
+		5) colorEcho $BLUE "选择了BBR_NEW \n"
+		download $bbr_new $url_bbr_new
+		checkFile $bbr_new
 		;;
 		6) colorEcho $BLUE "选择了MTproxy \n"
 		mtproxyDir

@@ -28,6 +28,10 @@ https://www.94ish.me/
 
 https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master  
 
+new BBR by @jinwyp
+
+https://github.com/jinwyp/one_click_script
+
 MTProxy by @ellermister
 
 https://github.com/ellermister/mtproxy
