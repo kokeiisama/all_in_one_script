@@ -46,7 +46,7 @@
 #script name
 shadowsocks='shadowsocks_all.sh'
 v2ray_233='v2ray_233.sh'
-v2ray_hijk='v2ray_hijk.sh'
+#v2ray_hijk='v2ray_hijk.sh'
 xray_hijk='xray_hijk.sh'
 bbr_old='bbr_old.sh'
 bbr_new='bbr_new.sh'
@@ -63,7 +63,7 @@ mtproxy_path='/root/mtproxy'
 #URL
 url_shadowsocks='https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh'
 url_v2ray_233='https://git.io/v2ray.sh'
-url_v2ray_hijk='https://s.hijk.art/v2ray.sh'
+#url_v2ray_hijk='https://s.hijk.art/v2ray.sh'
 #url_xray_hijk='https://s.hijk.art/xray.sh'
 #url_xray_hijk='https://cdn.jsdelivr.net/gh/Misaka-blog/Xray-script@master/xray.sh'
 url_one_click_jinwyp='https://raw.githubusercontent.com/jinwyp/one_click_script/master/trojan_v2ray_install.sh'
@@ -144,8 +144,8 @@ start(){
 	colorEcho $PLAIN "#"
 	colorEcho $GREEN "#v2ray by @233boy and @hijk"
 	colorEcho $GREEN "#https://github.com/233boy/v2ray"
-	colorEcho $GREEN "#https://hijk.art"
-	colorEcho $GREEN "#https://v2raytech.com/v2ray-all-in-one-script-vless-tcp-xtls-support/"
+	#colorEcho $GREEN "#https://hijk.art"
+	#colorEcho $GREEN "#https://v2raytech.com/v2ray-all-in-one-script-vless-tcp-xtls-support/"
 	colorEcho $PLAIN "#"
 	colorEcho $PLAIN "#"
 	#colorEcho $GREEN "#xray by @hijk"
@@ -179,13 +179,13 @@ start(){
 	#do
 	colorEcho $GREEN "[1] Shadowsocks all in one By Teddysun"
 	colorEcho $GREEN "[2] V2ray_233 By 233Boy"
-	colorEcho $GREEN "[3] V2ray_hijk By 网络跳跃(hijk.art)"
-	colorEcho $GREEN "[4] Xray_hijk By 网络跳跃(hijk.art)"
-	colorEcho $GREEN "[5] one_click by @jinwyp"
+	#colorEcho $GREEN "[3] V2ray_hijk By 网络跳跃(hijk.art)"
+	colorEcho $GREEN "[3] Xray_hijk By 网络跳跃(hijk.art)"
+	colorEcho $GREEN "[4] one_click by @jinwyp"
 	colorEcho $RED "[50] BBR By 千影&cx9208" $RED "NOT RECOMMENDED"
-	colorEcho $GREEN "[6] new BBR by @jinwyp"
-	colorEcho $GREEN "[7] MTProxy By ellermister"
-	colorEcho $GREEN "[8] Warp By fscarmen"
+	colorEcho $GREEN "[5] new BBR by @jinwyp"
+	colorEcho $GREEN "[6] MTProxy By ellermister"
+	colorEcho $GREEN "[7] Warp By fscarmen"
 	colorEcho $GREEN "[9] Update"
 	colorEcho $GREEN "[0] 退出 \n"
 	
@@ -199,11 +199,11 @@ start(){
 		download $v2ray_233 $url_v2ray_233
 		checkFile $v2ray_233
 		;;
-		3) colorEcho $BLUE "选择了V2ray_hijk \n"
-		download $v2ray_hijk $url_v2ray_hijk
-		checkFile $v2ray_hijk
+		# 3) colorEcho $BLUE "选择了V2ray_hijk \n"
+		# download $v2ray_hijk $url_v2ray_hijk
+		# checkFile $v2ray_hijk
 		;;
-		4) colorEcho $BLUE "选择了Xray_hijk \n"
+		3) colorEcho $BLUE "选择了Xray_hijk \n"
 		download $xray_hijk $url_xray_hijk
 		checkFile $xray_hijk
 		;;
@@ -211,20 +211,20 @@ start(){
 		download $bbr_old $url_bbr_old
 		checkFile $bbr_old
 		;;
-		5) colorEcho $BLUE "选择了One_click \n"
+		4) colorEcho $BLUE "选择了One_click \n"
 		download $one_click $url_one_click_jinwyp
 		checkFile $one_click
 		;;
-		6) colorEcho $BLUE "选择了BBR_NEW \n"
+		5) colorEcho $BLUE "选择了BBR_NEW \n"
 		download $bbr_new $url_bbr_new
 		checkFile $bbr_new
 		;;
-		7) colorEcho $BLUE "选择了MTproxy \n"
+		6) colorEcho $BLUE "选择了MTproxy \n"
 		mtproxyDir
 		download_mtp $mtproxy $url_mtproxy
 		checkFile $mtproxy
 		;;
-		8) colorEcho $BLUE "选择了Warp \n"
+		7) colorEcho $BLUE "选择了Warp \n"
 		download $warp $url_warp
 		checkFile $warp
 		;;
