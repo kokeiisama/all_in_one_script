@@ -202,7 +202,7 @@ start(){
 		# 3) colorEcho $BLUE "选择了V2ray_hijk \n"
 		# download $v2ray_hijk $url_v2ray_hijk
 		# checkFile $v2ray_hijk
-		;;
+		#;;
 		3) colorEcho $BLUE "选择了Xray_hijk \n"
 		download $xray_hijk $url_xray_hijk
 		checkFile $xray_hijk
