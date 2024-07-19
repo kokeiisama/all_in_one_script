@@ -51,6 +51,7 @@ xray_hijk='xray_hijk.sh'
 bbr_old='bbr_old.sh'
 bbr_new='bbr_new.sh'
 one_click='one_click.sh'
+hysteria2='hysteria.sh'
 
 mtproxy='mtproxy.sh'
 warp='warp.sh'
@@ -72,6 +73,7 @@ url_bbr_old='https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp
 url_bbr_new='https://raw.githubusercontent.com/jinwyp/one_click_script/master/install_kernel.sh'
 url_mtproxy='https://raw.githubusercontent.com/ellermister/mtproxy/master/mtproxy.sh'
 url_warp='https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh'
+url_hysteria2='https://raw.githubusercontent.com/Misaka-blog/hysteria-install/main/hy2/hysteria.sh'
 url_all_in_one='https://raw.githubusercontent.com/kokeiisama/all_in_one_script/main/all_in_one.sh'
 
 
@@ -131,6 +133,13 @@ mtproxyDir(){
 	cd $mtproxy_path
 }
 
+noChangeRootPermission(){
+	if [ -s $hysteria2 ];then
+		sed -i 's/chmod -R 777 \/root/#&/' $hysteria2
+	fi
+		grep -n "#chmod -R 777 /root" $hysteria2
+}
+
 start(){
 	clear
 	checkUser
@@ -186,6 +195,7 @@ start(){
 	colorEcho $GREEN "[5] new BBR by @jinwyp"
 	colorEcho $GREEN "[6] MTProxy By ellermister"
 	colorEcho $GREEN "[7] Warp By fscarmen"
+	colorEcho $GREEN "[8] hysteria2 By misaka"
 	colorEcho $GREEN "[9] Update"
 	colorEcho $GREEN "[0] 退出 \n"
 	
@@ -227,6 +237,11 @@ start(){
 		7) colorEcho $BLUE "选择了Warp \n"
 		download $warp $url_warp
 		checkFile $warp
+		;;
+		8) colorEcho $BLUE "选择了Hysteria2 \n"
+		download $hysteria2 $url_hysteria2
+		noChangeRootPermission
+		checkFile $hysteria2
 		;;
 		9) colorEcho $BLUE "updating \n"
 		download $all_in_one $url_all_in_one
