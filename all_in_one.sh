@@ -55,6 +55,7 @@ hysteria2='hysteria.sh'
 
 mtproxy='mtproxy.sh'
 warp='warp.sh'
+yg_warp='yg_warp.sh'
 all_in_one='all_in_one.sh'
 
 #save path
@@ -73,6 +74,7 @@ url_bbr_old='https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp
 url_bbr_new='https://raw.githubusercontent.com/jinwyp/one_click_script/master/install_kernel.sh'
 url_mtproxy='https://raw.githubusercontent.com/ellermister/mtproxy/master/mtproxy.sh'
 url_warp='https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh'
+url_ygwarp='https://raw.githubusercontent.com/yonggekkk/warp-yg/main/CFwarp.sh'
 url_hysteria2='https://raw.githubusercontent.com/Misaka-blog/hysteria-install/main/hy2/hysteria.sh'
 url_all_in_one='https://raw.githubusercontent.com/kokeiisama/all_in_one_script/main/all_in_one.sh'
 
@@ -195,6 +197,7 @@ start(){
 	colorEcho $GREEN "[5] new BBR by @jinwyp"
 	colorEcho $GREEN "[6] MTProxy By ellermister"
 	colorEcho $GREEN "[7] Warp By fscarmen"
+	colorEcho $GREEN "[71] ygWarp By yonggekkk"
 	colorEcho $GREEN "[8] hysteria2 By misaka"
 	colorEcho $GREEN "[9] Update"
 	colorEcho $GREEN "[0] 退出 \n"
@@ -237,6 +240,10 @@ start(){
 		7) colorEcho $BLUE "选择了Warp \n"
 		download $warp $url_warp
 		checkFile $warp
+		;;
+		71) colorEcho $BLUE "选择了ygWarp \n"
+		download $yg_warp $url_ygwarp
+		checkFile $yg_warp
 		;;
 		8) colorEcho $BLUE "选择了Hysteria2 \n"
 		download $hysteria2 $url_hysteria2
